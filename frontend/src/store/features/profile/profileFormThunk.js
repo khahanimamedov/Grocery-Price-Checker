@@ -11,7 +11,6 @@ export const saveProfile = createAsyncThunk(
       await setDoc(userRef, { ...otherUserDetails });
       return profileData;
     } catch (error) {
-      console.log(error);
       throw new Error(error.message);
     }
   }

@@ -14,7 +14,6 @@ function Products() {
         <MightCardsSection />
         <Subscribe />
       </Container>
-      {/* <Footer /> */}
     </>
   );
 }

@@ -8,7 +8,7 @@ const getProductsData = (product) => {
     shippingInformation: product.shippingInformation,
     availabilityStatus: product.availabilityStatus,
     reviews: product.reviews,
-    warrantyInformation: product.warrantyInformation,
+    warranty: product.warrantyInformation,
     image: product.thumbnail,
     stock: product.stock,
   };

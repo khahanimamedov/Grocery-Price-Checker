@@ -11,6 +11,7 @@ export const logout = createAsyncThunk(
       navigate("/login");
 
       localStorage.removeItem("user");
+      localStorage.removeItem("currentUser");
     } catch (error) {
       console.log("Here");
       console.log(error);

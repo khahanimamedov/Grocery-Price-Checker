@@ -28,9 +28,17 @@ const ProductsCardSection = () => {
       </Typography>
 
       <Box display="flex" gap={3} flexWrap="wrap" justifyContent="center">
-        {productsList?.map((product) => (
-          <ProductCard {...product} />
-        ))}
+        {productsList ? (
+          <>
+            {productsList?.map((product) => (
+              <ProductCard {...product} />
+            ))}
+          </>
+        ) : (
+          <Typography>
+            Data is temporarily unavailable. Please try again later.
+          </Typography>
+        )}
       </Box>
 
       <Box textAlign="center" margin="50px 0">

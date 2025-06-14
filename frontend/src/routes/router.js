@@ -28,7 +28,6 @@ export default createBrowserRouter([
       {
         path: "/product/:productId",
         Component: ProductPage,
-        // loader: async ({ params }) => {},
       },
     ],
   },

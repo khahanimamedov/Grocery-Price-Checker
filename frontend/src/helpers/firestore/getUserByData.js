@@ -6,7 +6,11 @@ export const getUserByData = async (uid) => {
     const db = getFirestore();
     const userRef = doc(db, "users", uid);
     const userDocSnap = await getDoc(userRef);
-    return userDocSnap.data();
+
+    const { name, surname } = userDocSnap.data();
+    localStorage.setItem("currentUser", JSON.stringify({ name, surname }));
+
+    return { ...userDocSnap.data() };
   } catch (error) {
     throw new ServerError(error.message);
   }

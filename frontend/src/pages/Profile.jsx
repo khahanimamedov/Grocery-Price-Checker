@@ -30,18 +30,10 @@ const Profile = () => {
   const profile = useSelector((state) => state.profile);
   const usersProfile = useSelector((state) => state.profile.profile);
   const profileError = useSelector((state) => state.profile.error);
-  console.log(profileError);
 
   const [isOpenPushNotification, setIsOpenPushNotification] = useState(false);
   const [isErrorOpenPushNotification, setErrorOpenPushNotification] =
     useState(false);
-
-  const CustomSnackBarContext = createContext({
-    isErrorOpenPushNotification,
-    isOpenPushNotification,
-    setIsOpenPushNotification,
-    setErrorOpenPushNotification,
-  });
 
   const {
     register,
